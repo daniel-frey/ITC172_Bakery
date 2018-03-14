@@ -26,7 +26,6 @@ namespace Bakery.Controllers
         [ValidateAntiForgeryToken]
         
         public ActionResult Register([Bind(Include ="LastName, FirstName, Email, " +
-                                                    "Password, " +
                                                     "Phone")] NewPerson p)
         {
             int result = db.uRegister(p.LastName, p.FirstName, p.Email,
